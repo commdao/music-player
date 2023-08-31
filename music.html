@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="music-style.css">
+    <title>BlackJackJonny</title>
+</head>
+<body>
+    <div class="spotlight">
+        <img src="media/blackjackjonny.jpg" alt="artist-image" class="top-image">
+        <div class="bio">
+            <h1>BlackJackJonny</h1>
+            <p class="details">I have no professional training, but I get lucky with how my ears work sometimes. 
+                I was on the path to making more and more legit remixes. But then I learned about 
+                the Camelot Wheel and how easy it was to make mashups. Whoopsie!
+            </p>
+            <p class="details track">💜&nbsp; <b>6 songs</b>, about 25 min</p>
+        </div>
+    </div>
+    
+    <div class="icon">
+        <span class="play"><i class="fa fa-play" aria-hidden="true"></i></span>
+        <span class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+        <span class="dots">...</span>
+    </div>
+
+    <div class="tracklist">
+        
+        <div class="track header">
+            <span class="track-number">#</span>
+            <span class="track-title">Title</span>
+            <span class="track-year">Year</span>
+            <span class="track-duration"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+        </div>
+        <audio src="media/tracks/1 - Melty Blood Basilica.mp3" preload="auto"></audio>
+        <div class="track">
+            <span class="track-number">1</span>
+            <span class="track-title">Melty Blood Basilica [Type B: 1-2]</span>
+            <span class="track-year">2022</span>
+            <span class="track-duration">3:07</span>
+        </div>
+        <div class="track">
+            <span class="track-number">2</span>
+            <span class="track-title">Private Room in the Velvet Room</span>
+            <span class="track-year">2022</span>
+            <span class="track-duration">3:26</span>
+        </div>
+        <div class="track">
+            <span class="track-number">3</span>
+            <span class="track-title">CL - Tie a Cherry (BlackJackJonny Remix)</span>
+            <span class="track-year">2021</span>
+            <span class="track-duration">3:09</span>
+        </div>
+        <div class="track">
+            <span class="track-number">4</span>
+            <span class="track-title">Garibaldi Temple Remix</span>
+            <span class="track-year">2021</span>
+            <span class="track-duration">1:56</span>
+            
+        </div>
+        <div class="track">
+            <span class="track-number">5</span>
+            <span class="track-title">Mousse T vs Hot'n'Juicy - Horny (Chiptune Remix)</span>
+            <span class="track-year">2022</span>
+            <span class="track-duration">2:25</span>
+        </div>
+        <div class="track">
+            <span class="track-number">6</span>
+            <span class="track-title">Winter Sonata</span>
+            <span class="track-year">2020</span>
+            <span class="track-duration">4:24</span>
+        </div>
+        <div class="track">
+            <span class="track-number">7</span>
+            <span class="track-title">Tulibu Dibu Douchu</span>
+            <span class="track-year">2020</span>
+            <span class="track-duration">1:05</span>
+        </div>
+        <div class="track">
+            <span class="track-number">8</span>
+            <span class="track-title">HBV</span>
+            <span class="track-year">2011</span>
+            <span class="track-duration">1:02</span>
+        </div>
+    </div>
+    <div class="footer">
+        <span class="song-photo"></span>
+        <span class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+        <div class="miniplayer">
+            <div class="track-name" id="currentTrackName"></div>
+            <div class="controls">
+                <span class="shuffle"><i class="fa fa-random fa-lg" aria-hidden="true"></i></span>
+                <span class="previous" id="prevIcon"><i class="fa fa-step-backward fa-lg" aria-hidden="true"></i></span>
+                <span class="play" id="playIcon"><i class="fa fa-play fa-lg" aria-hidden="true"></i></span>
+                <span class="next" id="nextIcon"><i class="fa fa-step-forward fa-lg" aria-hidden="true"></i></span>
+                <span class="repeat"><i class="fa fa-repeat fa-lg" aria-hidden="true"></i></span>
+            </div>
+            <div class="time">
+                <span class="current-time">0:00</span>
+                <span class="total-duration">0:00</span>
+              </div>
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+                <div class="progress-bar-handle"></div> 
+            </div>
+        </div>
+        <div class="volume-container">
+            <span class="volume-icon">
+                <i class="fa fa-volume-up volume-icon" aria-hidden="true"></i>
+            </span>
+            <div class="volume-slider-container">
+                <div class="volume-slider"></div>
+            </div>
+        </div>
+    </div>
+    <script src="music-main.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+body {
+    color: rgba(255, 255, 255, .95);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+    background: rgb(75,19,79);
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    margin-top: 50px;
+    margin-left: 50px;
+    object-fit: cover;
+}
+
+.top-image {
+    border-radius: 100%;
+}
+
+.spotlight {
+    background: rgb(99,9,103);
+    background: linear-gradient(23deg, rgba(99,9,103,1) 0%, rgba(95,63,119,1) 100%, rgba(34,34,34,1) 100%);display: flex;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-bottom: 25px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    padding-left: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.track {
+    margin-top: 0;
+    justify-content: left;
+}
+
+.tracklist {
+    background: rgb(75,19,79);
+    margin-top: 10px;
+    font-size: 1.15rem;
+}
+
+.icon {
+    font-size: 2rem;
+    margin: 5px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+/* .icon:hover {
+    font-size: 3rem;
+} */
+
+.header {
+    border-bottom: 1px solid white;
+}
+
+.tracklist {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.track {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.track-number {
+    width: 30px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.track-number::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.track:hover .track-number::before {
+    display: block;
+    content: "\f144";
+}
+
+.track-title {
+    flex-grow: 1;
+}
+
+.track-duration {
+    width: 60px;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(43, 11, 45);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.song-photo {
+    width: 56px;
+    height: 56px;
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+}
+
+.track-name {
+    padding-bottom: 10px;
+}
+
+.miniplayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: -100px;
+    margin-bottom: 0;
+    height: 72px;
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.progress-bar-container {
+    position: relative;
+    width: 30%;
+    height: 5px;
+    border-radius: 25px;
+    background: rgb(208, 205, 205, .8);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.progress-bar-handle {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    pointer-events: none;
+}
+
+#progress-bar {
+    height: 100%;
+    background: rgb(82,208,83);
+    width: 0%;
+    border-radius: 25px;
+    transition: width 0.1s ease-in-out;
+}
+
+.current-time {
+    position: absolute;
+    margin-right: 35%;
+    margin-top: 28px;
+}
+
+.total-duration {
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 28px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-container {
+    position: absolute;
+    margin-left: 80%;
+    margin-top: 50px;
+}
+
+.volume-slider-container {
+    position: absolute;
+    display: block;
+    width: 100px; /* Adjust the width as needed */
+    height: 6px;
+    background-color: grey;
+    bottom: 6px; /* Adjust the distance from the volume icon */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.volume-slider {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(82, 208, 83);
+    pointer-events: none;
+}
+
+.volume-icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -40px; /* Half of the icon's width */
+    cursor: pointer;
+}
