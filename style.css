@@ -2,7 +2,7 @@ body {
     color: rgba(255, 255, 255, .95);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 200;
-    background: rgb(75,19,79);
+    background: rgb(56, 20, 101);
 }
 
 img {
@@ -18,8 +18,8 @@ img {
 }
 
 .spotlight {
-    background: rgb(99,9,103);
-    background: linear-gradient(23deg, rgba(99,9,103,1) 0%, rgba(95,63,119,1) 100%, rgba(34,34,34,1) 100%);display: flex;
+    background: linear-gradient(23deg, rgba(2,0,36,1) 0%, rgba(71,26,128,1) 0%, rgba(92,51,142,1) 45%);
+    display: flex;
 }
 
 .bio {
@@ -50,7 +50,7 @@ h1 {
 }
 
 .tracklist {
-    background: rgb(75,19,79);
+    background: rgb(56, 20, 101);
     margin-top: 10px;
     font-size: 1.15rem;
 }
@@ -123,7 +123,7 @@ h1 {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: rgb(43, 11, 45);
+    background: linear-gradient(29deg, rgba(2,0,36,1) 0%, rgb(39, 14, 72) 0%, rgb(56, 30, 87) 100%);
     padding: 10px;
     display: flex;
     align-items: center;
