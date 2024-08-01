@@ -87,21 +87,37 @@ function playTrack(trackPath) {
     });
     const songPhotoElement = document.querySelector('.song-photo');
     songPhotoElement.style.backgroundImage = `url(${albumArtPath})`;
+
+    playButton.innerHTML = `<i class="fa fa-pause fa-lg" aria-hidden="true"></i>`;
 }
 
 const playButton = document.getElementById('playIcon');
 playButton.addEventListener('click', togglePlay);
 
 function togglePlay() {
-    console.log('working')
     if (audioPlayer.paused) {
-        audioPlayer.play(); // Play the audio
+        if (!audioPlayer.src) {
+            currentTrackIndex = 0;
+            const firstTrack = tracks[currentTrackIndex + 1];
+            playTrack(firstTrack.path);
+        } else {
+            audioPlayer.play(); // Play the audio
+        }
         playButton.innerHTML = '<i class="fa fa-pause fa-lg" aria-hidden="true"></i>'; // Update the play icon to pause icon
     } else {
         audioPlayer.pause(); // Pause the audio
         playButton.innerHTML = '<i class="fa fa-play fa-lg" aria-hidden="true"></i>'; // Update the pause icon to play icon
     }
 }
+
+// hover play button
+document.querySelectorAll('.track').forEach((track, index) => {
+    track.addEventListener('click', () => {
+        currentTrackIndex = index;
+        const trackToPlay = tracks[currentTrackIndex + 1];
+        playTrack(trackToPlay.path);
+    });
+});
 
 const nextButton = document.getElementById('nextIcon');
 const prevButton = document.getElementById('prevIcon');

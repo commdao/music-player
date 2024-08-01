@@ -91,12 +91,12 @@ h1 {
 }
 
 .track-number::before {
-    content: "";
+    content: "\f144";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 15%;
+    left: -30px;
+    /* width: 100%;
+    height: 100%; */
     display: none;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -105,7 +105,7 @@ h1 {
 
 .track:hover .track-number::before {
     display: block;
-    content: "\f144";
+    /* content: "\f144"; */
 }
 
 .track-title {
